@@ -6,6 +6,11 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45D3C6AE2FE1A872001C0D33 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D3C6AD2FE1A872001C0D33 /* NetworkExtension.framework */; };
+		45D3C6B62FE1A872001C0D33 /* tunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 45D3C6AB2FE1A872001C0D33 /* tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		45D3C68C2FE1A761001C0D33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +26,33 @@
 			remoteGlobalIDString = 45D3C6792FE1A760001C0D33;
 			remoteInfo = swiftlet;
 		};
+		45D3C6B42FE1A872001C0D33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D3C6722FE1A760001C0D33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D3C6AA2FE1A872001C0D33;
+			remoteInfo = tunnel;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45D3C6BB2FE1A872001C0D33 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				45D3C6B62FE1A872001C0D33 /* tunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45D3C67A2FE1A760001C0D33 /* swiftlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D3C68B2FE1A761001C0D33 /* swiftletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D3C6952FE1A761001C0D33 /* swiftletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D3C6AB2FE1A872001C0D33 /* tunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = tunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D3C6AD2FE1A872001C0D33 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +62,13 @@
 				Info.plist,
 			);
 			target = 45D3C6792FE1A760001C0D33 /* swiftlet */;
+		};
+		45D3C6BA2FE1A872001C0D33 /* Exceptions for "tunnel" folder in "tunnel" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 45D3C6AA2FE1A872001C0D33 /* tunnel */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -58,6 +91,14 @@
 			path = swiftletUITests;
 			sourceTree = "<group>";
 		};
+		45D3C6AF2FE1A872001C0D33 /* tunnel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				45D3C6BA2FE1A872001C0D33 /* Exceptions for "tunnel" folder in "tunnel" target */,
+			);
+			path = tunnel;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +117,12 @@
 			files = (
 			);
 		};
+		45D3C6A82FE1A872001C0D33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				45D3C6AE2FE1A872001C0D33 /* NetworkExtension.framework in Frameworks */,
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +132,8 @@
 				45D3C67C2FE1A760001C0D33 /* swiftlet */,
 				45D3C68E2FE1A761001C0D33 /* swiftletTests */,
 				45D3C6982FE1A761001C0D33 /* swiftletUITests */,
+				45D3C6AF2FE1A872001C0D33 /* tunnel */,
+				45D3C6AC2FE1A872001C0D33 /* Frameworks */,
 				45D3C67B2FE1A760001C0D33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,8 +144,17 @@
 				45D3C67A2FE1A760001C0D33 /* swiftlet.app */,
 				45D3C68B2FE1A761001C0D33 /* swiftletTests.xctest */,
 				45D3C6952FE1A761001C0D33 /* swiftletUITests.xctest */,
+				45D3C6AB2FE1A872001C0D33 /* tunnel.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		45D3C6AC2FE1A872001C0D33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45D3C6AD2FE1A872001C0D33 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,8 +167,12 @@
 				45D3C6762FE1A760001C0D33 /* Sources */,
 				45D3C6772FE1A760001C0D33 /* Frameworks */,
 				45D3C6782FE1A760001C0D33 /* Resources */,
+				45D3C6BB2FE1A872001C0D33 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				45D3C6B52FE1A872001C0D33 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				45D3C67C2FE1A760001C0D33 /* swiftlet */,
@@ -162,6 +224,24 @@
 			productReference = 45D3C6952FE1A761001C0D33 /* swiftletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		45D3C6AA2FE1A872001C0D33 /* tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D3C6B72FE1A872001C0D33 /* Build configuration list for PBXNativeTarget "tunnel" */;
+			buildPhases = (
+				45D3C6A72FE1A872001C0D33 /* Sources */,
+				45D3C6A82FE1A872001C0D33 /* Frameworks */,
+				45D3C6A92FE1A872001C0D33 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				45D3C6AF2FE1A872001C0D33 /* tunnel */,
+			);
+			name = tunnel;
+			productName = tunnel;
+			productReference = 45D3C6AB2FE1A872001C0D33 /* tunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,6 +263,9 @@
 						CreatedOnToolsVersion = 27.0;
 						TestTargetID = 45D3C6792FE1A760001C0D33;
 					};
+					45D3C6AA2FE1A872001C0D33 = {
+						CreatedOnToolsVersion = 27.0;
+					};
 				};
 			};
 			buildConfigurationList = 45D3C6752FE1A760001C0D33 /* Build configuration list for PBXProject "swiftlet" */;
@@ -202,6 +285,7 @@
 				45D3C6792FE1A760001C0D33 /* swiftlet */,
 				45D3C68A2FE1A761001C0D33 /* swiftletTests */,
 				45D3C6942FE1A761001C0D33 /* swiftletUITests */,
+				45D3C6AA2FE1A872001C0D33 /* tunnel */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +302,11 @@
 			);
 		};
 		45D3C6932FE1A761001C0D33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		45D3C6A92FE1A872001C0D33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -240,6 +329,11 @@
 			files = (
 			);
 		};
+		45D3C6A72FE1A872001C0D33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -252,6 +346,11 @@
 			isa = PBXTargetDependency;
 			target = 45D3C6792FE1A760001C0D33 /* swiftlet */;
 			targetProxy = 45D3C6962FE1A761001C0D33 /* PBXContainerItemProxy */;
+		};
+		45D3C6B52FE1A872001C0D33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D3C6AA2FE1A872001C0D33 /* tunnel */;
+			targetProxy = 45D3C6B42FE1A872001C0D33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -270,6 +369,8 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = swiftlet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = swiftlet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -280,24 +381,26 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stuwang.swiftlet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 27.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_TVOS_DEPLOYMENT_TARGET)";
+				XROS_DEPLOYMENT_TARGET = "$(RECOMMENDED_XROS_DEPLOYMENT_TARGET)";
 			};
 			name = Debug;
 		};
@@ -315,6 +418,8 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = swiftlet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = swiftlet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -325,24 +430,26 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stuwang.swiftlet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 27.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_TVOS_DEPLOYMENT_TARGET)";
+				XROS_DEPLOYMENT_TARGET = "$(RECOMMENDED_XROS_DEPLOYMENT_TARGET)";
 			};
 			name = Release;
 		};
@@ -564,6 +671,69 @@
 			};
 			name = Release;
 		};
+		45D3C6B82FE1A872001C0D33 /* Debug configuration for PBXNativeTarget "tunnel" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = tunnel/tunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H2NS3XTS96;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = tunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stuwang.swiftlet.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45D3C6B92FE1A872001C0D33 /* Release configuration for PBXNativeTarget "tunnel" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = tunnel/tunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H2NS3XTS96;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = tunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stuwang.swiftlet.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -596,6 +766,14 @@
 			buildConfigurations = (
 				45D3C6A52FE1A761001C0D33 /* Debug configuration for PBXNativeTarget "swiftletUITests" */,
 				45D3C6A62FE1A761001C0D33 /* Release configuration for PBXNativeTarget "swiftletUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		45D3C6B72FE1A872001C0D33 /* Build configuration list for PBXNativeTarget "tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D3C6B82FE1A872001C0D33 /* Debug configuration for PBXNativeTarget "tunnel" */,
+				45D3C6B92FE1A872001C0D33 /* Release configuration for PBXNativeTarget "tunnel" */,
 			);
 			defaultConfigurationName = Release;
 		};
